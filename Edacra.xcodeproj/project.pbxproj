@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FB367361CB4288300397429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367351CB4288300397429 /* AppDelegate.swift */; };
+		3FB367381CB4288300397429 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367371CB4288300397429 /* ViewController.swift */; };
+		3FB3673B1CB4288300397429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB367391CB4288300397429 /* Main.storyboard */; };
+		3FB3673D1CB4288300397429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB3673C1CB4288300397429 /* Assets.xcassets */; };
+		3FB367401CB4288300397429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */; };
+		3FB3674B1CB4288300397429 /* EdacraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3674A1CB4288300397429 /* EdacraTests.swift */; };
+		3FB367561CB4288300397429 /* EdacraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367551CB4288300397429 /* EdacraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FB367471CB4288300397429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FB3672A1CB4288300397429 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FB367311CB4288300397429;
+			remoteInfo = Edacra;
+		};
+		3FB367521CB4288300397429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FB3672A1CB4288300397429 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FB367311CB4288300397429;
+			remoteInfo = Edacra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FB367321CB4288300397429 /* Edacra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edacra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB367351CB4288300397429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FB367371CB4288300397429 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FB3673A1CB4288300397429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FB3673C1CB4288300397429 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FB3673F1CB4288300397429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FB367411CB4288300397429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB367461CB4288300397429 /* EdacraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdacraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB3674A1CB4288300397429 /* EdacraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdacraTests.swift; sourceTree = "<group>"; };
+		3FB3674C1CB4288300397429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB367511CB4288300397429 /* EdacraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdacraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB367551CB4288300397429 /* EdacraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdacraUITests.swift; sourceTree = "<group>"; };
+		3FB367571CB4288300397429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FB3672F1CB4288300397429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB367431CB4288300397429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB3674E1CB4288300397429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FB367291CB4288300397429 = {
+			isa = PBXGroup;
+			children = (
+				3FB367341CB4288300397429 /* Edacra */,
+				3FB367491CB4288300397429 /* EdacraTests */,
+				3FB367541CB4288300397429 /* EdacraUITests */,
+				3FB367331CB4288300397429 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FB367331CB4288300397429 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FB367321CB4288300397429 /* Edacra.app */,
+				3FB367461CB4288300397429 /* EdacraTests.xctest */,
+				3FB367511CB4288300397429 /* EdacraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FB367341CB4288300397429 /* Edacra */ = {
+			isa = PBXGroup;
+			children = (
+				3FB367351CB4288300397429 /* AppDelegate.swift */,
+				3FB367371CB4288300397429 /* ViewController.swift */,
+				3FB367391CB4288300397429 /* Main.storyboard */,
+				3FB3673C1CB4288300397429 /* Assets.xcassets */,
+				3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */,
+				3FB367411CB4288300397429 /* Info.plist */,
+			);
+			path = Edacra;
+			sourceTree = "<group>";
+		};
+		3FB367491CB4288300397429 /* EdacraTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FB3674A1CB4288300397429 /* EdacraTests.swift */,
+				3FB3674C1CB4288300397429 /* Info.plist */,
+			);
+			path = EdacraTests;
+			sourceTree = "<group>";
+		};
+		3FB367541CB4288300397429 /* EdacraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FB367551CB4288300397429 /* EdacraUITests.swift */,
+				3FB367571CB4288300397429 /* Info.plist */,
+			);
+			path = EdacraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FB367311CB4288300397429 /* Edacra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB3675A1CB4288300397429 /* Build configuration list for PBXNativeTarget "Edacra" */;
+			buildPhases = (
+				3FB3672E1CB4288300397429 /* Sources */,
+				3FB3672F1CB4288300397429 /* Frameworks */,
+				3FB367301CB4288300397429 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Edacra;
+			productName = Edacra;
+			productReference = 3FB367321CB4288300397429 /* Edacra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FB367451CB4288300397429 /* EdacraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB3675D1CB4288300397429 /* Build configuration list for PBXNativeTarget "EdacraTests" */;
+			buildPhases = (
+				3FB367421CB4288300397429 /* Sources */,
+				3FB367431CB4288300397429 /* Frameworks */,
+				3FB367441CB4288300397429 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FB367481CB4288300397429 /* PBXTargetDependency */,
+			);
+			name = EdacraTests;
+			productName = EdacraTests;
+			productReference = 3FB367461CB4288300397429 /* EdacraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FB367501CB4288300397429 /* EdacraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB367601CB4288300397429 /* Build configuration list for PBXNativeTarget "EdacraUITests" */;
+			buildPhases = (
+				3FB3674D1CB4288300397429 /* Sources */,
+				3FB3674E1CB4288300397429 /* Frameworks */,
+				3FB3674F1CB4288300397429 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FB367531CB4288300397429 /* PBXTargetDependency */,
+			);
+			name = EdacraUITests;
+			productName = EdacraUITests;
+			productReference = 3FB367511CB4288300397429 /* EdacraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FB3672A1CB4288300397429 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nick Pappas";
+				TargetAttributes = {
+					3FB367311CB4288300397429 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 336695RJ3Y;
+					};
+					3FB367451CB4288300397429 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 336695RJ3Y;
+						TestTargetID = 3FB367311CB4288300397429;
+					};
+					3FB367501CB4288300397429 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 336695RJ3Y;
+						TestTargetID = 3FB367311CB4288300397429;
+					};
+				};
+			};
+			buildConfigurationList = 3FB3672D1CB4288300397429 /* Build configuration list for PBXProject "Edacra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FB367291CB4288300397429;
+			productRefGroup = 3FB367331CB4288300397429 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FB367311CB4288300397429 /* Edacra */,
+				3FB367451CB4288300397429 /* EdacraTests */,
+				3FB367501CB4288300397429 /* EdacraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FB367301CB4288300397429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB367401CB4288300397429 /* LaunchScreen.storyboard in Resources */,
+				3FB3673D1CB4288300397429 /* Assets.xcassets in Resources */,
+				3FB3673B1CB4288300397429 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB367441CB4288300397429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB3674F1CB4288300397429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FB3672E1CB4288300397429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB367381CB4288300397429 /* ViewController.swift in Sources */,
+				3FB367361CB4288300397429 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB367421CB4288300397429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB3674B1CB4288300397429 /* EdacraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB3674D1CB4288300397429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB367561CB4288300397429 /* EdacraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FB367481CB4288300397429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FB367311CB4288300397429 /* Edacra */;
+			targetProxy = 3FB367471CB4288300397429 /* PBXContainerItemProxy */;
+		};
+		3FB367531CB4288300397429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FB367311CB4288300397429 /* Edacra */;
+			targetProxy = 3FB367521CB4288300397429 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FB367391CB4288300397429 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB3673A1CB4288300397429 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB3673F1CB4288300397429 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FB367581CB4288300397429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FB367591CB4288300397429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FB3675B1CB4288300397429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Edacra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.Edacra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3FB3675C1CB4288300397429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Edacra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.Edacra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3FB3675E1CB4288300397429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EdacraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.EdacraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Edacra.app/Edacra";
+			};
+			name = Debug;
+		};
+		3FB3675F1CB4288300397429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EdacraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.EdacraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Edacra.app/Edacra";
+			};
+			name = Release;
+		};
+		3FB367611CB4288300397429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EdacraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.EdacraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Edacra;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3FB367621CB4288300397429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EdacraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.EdacraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Edacra;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FB3672D1CB4288300397429 /* Build configuration list for PBXProject "Edacra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB367581CB4288300397429 /* Debug */,
+				3FB367591CB4288300397429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB3675A1CB4288300397429 /* Build configuration list for PBXNativeTarget "Edacra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB3675B1CB4288300397429 /* Debug */,
+				3FB3675C1CB4288300397429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FB3675D1CB4288300397429 /* Build configuration list for PBXNativeTarget "EdacraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB3675E1CB4288300397429 /* Debug */,
+				3FB3675F1CB4288300397429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FB367601CB4288300397429 /* Build configuration list for PBXNativeTarget "EdacraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB367611CB4288300397429 /* Debug */,
+				3FB367621CB4288300397429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FB3672A1CB4288300397429 /* Project object */;
+}
