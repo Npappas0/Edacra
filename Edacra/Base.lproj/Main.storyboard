@@ -33,5 +33,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--MenuViewController-->
+        <scene sceneID="C8W-5m-IUe">
+            <objects>
+                <viewController title="MenuViewController" id="0lH-AX-9jO" customClass="MenuViewController" customModule="Edacra" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OwF-2D-r7D"/>
+                        <viewControllerLayoutGuide type="bottom" id="sD7-8s-D0e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vcU-va-8JM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bxb-5j-wMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="279"/>
+        </scene>
     </scenes>
 </document>

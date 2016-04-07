@@ -14,6 +14,7 @@
 		3FB367401CB4288300397429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */; };
 		3FB3674B1CB4288300397429 /* EdacraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3674A1CB4288300397429 /* EdacraTests.swift */; };
 		3FB367561CB4288300397429 /* EdacraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367551CB4288300397429 /* EdacraUITests.swift */; };
+		3FB367641CB6CAD800397429 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367631CB6CAD800397429 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3FB367511CB4288300397429 /* EdacraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdacraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB367551CB4288300397429 /* EdacraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdacraUITests.swift; sourceTree = "<group>"; };
 		3FB367571CB4288300397429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB367631CB6CAD800397429 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				3FB367351CB4288300397429 /* AppDelegate.swift */,
 				3FB367371CB4288300397429 /* ViewController.swift */,
 				3FB367391CB4288300397429 /* Main.storyboard */,
+				3FB367631CB6CAD800397429 /* MenuViewController.swift */,
 				3FB3673C1CB4288300397429 /* Assets.xcassets */,
 				3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */,
 				3FB367411CB4288300397429 /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB367381CB4288300397429 /* ViewController.swift in Sources */,
+				3FB367641CB6CAD800397429 /* MenuViewController.swift in Sources */,
 				3FB367361CB4288300397429 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
