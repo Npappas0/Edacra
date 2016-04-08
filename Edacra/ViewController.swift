@@ -35,6 +35,7 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         timerFunction()
+        pointCounter.text = "0"
         
         innerView = UIView(frame: CGRectMake(20, 50, 300, 300))
         innerView.backgroundColor = UIColor.blackColor()
@@ -108,11 +109,11 @@ class ViewController: UIViewController
             if (CGRectIntersectsRect(block.frame, blockSpawn.frame))
             {
                 blockSpawn.removeFromSuperview()
+                pointCounter.text = (Int(pointCounter.text!)! + 10).description
             }
         }
         xPos += xMove
         yPos += yMove
-        pointCounter.text = "\(xPos)"
         self.block.transform = CGAffineTransformMakeTranslation(xPos, yPos)
         if xPos == 150||(xPos == -150)||(yPos == 150)||(yPos == -150)
         {
