@@ -28,8 +28,7 @@ class ViewController: UIViewController
     ///Randomizer Variables
     var spawnedBlocks : [UIView] = []
     var rBlock = UIView()
-    var creationArrayX = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290]
-    var creationArrayY = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290]
+    var creationArray : [Int] = []
     var personalNumber = UInt32(29)
     var number1 = Int()
     var number2 = Int()
@@ -42,18 +41,23 @@ class ViewController: UIViewController
         super.viewDidLoad()
         timerFunction()
         
-        innerView = UIView(frame: CGRectMake(20
-            , 50
-            , 300, 300))
+        innerView = UIView(frame: CGRectMake(20, 50, 300, 300))
         innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
-        block = UIView(frame: CGRectMake(150, 150
-            , 10, 10))
+        block = UIView(frame: CGRectMake(150, 150, 10, 10))
         block.backgroundColor = UIColor.whiteColor()
         self.innerView.addSubview(block)
         
         view.backgroundColor = UIColor.magentaColor()
+        
+        for var y = 0; y < 2; y++
+        {
+            for var x = 10; x < 300; x += 10
+            {
+                creationArray.append(x)
+            }
+        }
         
         for direction in directions
         {
@@ -116,7 +120,7 @@ class ViewController: UIViewController
             yPos = CGFloat(0)
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
             
-            var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
             
                 
@@ -126,21 +130,15 @@ class ViewController: UIViewController
             presentViewController(alert, animated: true, completion: nil)
     }
 }
-    func blockRandom() {
-        if personalNumber == 1{
+    func blockRandom()
+    {
+        if creationArray.count == 0
+        {
             print("Gayme Ogre")
         }
-        else{
-        number1 = Int(arc4random() % personalNumber)
-        xCreation = creationArrayX[number1]
-        creationArrayX.removeAtIndex(number1)
-        
-        number2 = Int(arc4random() % personalNumber)
-        yCreation = creationArrayY[number2]
-        creationArrayY.removeAtIndex(number2)
-        
-        randomatior(xCreation, y: yCreation)
-        personalNumber = personalNumber - UInt32(1)
+        else
+        {
+            randomatior(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)))
         }
     }
     func randomatior(x: Int, y: Int){
