@@ -29,11 +29,6 @@ class ViewController: UIViewController
     var spawnedBlocks : [UIView] = []
     var rBlock = UIView()
     var creationArray : [Int] = []
-    var personalNumber = UInt32(29)
-    var number1 = Int()
-    var number2 = Int()
-    var xCreation = Int()
-    var yCreation = Int()
     ////
     
     override func viewDidLoad()
