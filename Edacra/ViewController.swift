@@ -103,6 +103,13 @@ class ViewController: UIViewController
     
     func updatePosition()
     {
+        for blockSpawn in spawnedBlocks
+        {
+            if (CGRectIntersectsRect(block.frame, blockSpawn.frame))
+            {
+                blockSpawn.removeFromSuperview()
+            }
+        }
         xPos += xMove
         yPos += yMove
         pointCounter.text = "\(xPos)"
@@ -111,8 +118,10 @@ class ViewController: UIViewController
         {
             //Probably change to
                //write code here for what happens then aleart happens
-            xPos = CGFloat(0)
-            yPos = CGFloat(0)
+            xMove = 0
+            yMove = 0
+            xPos = 0
+            yPos = 0
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
@@ -136,6 +145,7 @@ class ViewController: UIViewController
             randomatior(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)))
         }
     }
+    
     func randomatior(x: Int, y: Int){
         rBlock = UIView(frame: CGRectMake((CGFloat)(x), (CGFloat)(y), 10, 10))
         rBlock.backgroundColor = UIColor.whiteColor()
