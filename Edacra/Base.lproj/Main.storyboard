@@ -53,8 +53,12 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="ZIb-cv-o63"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-Fh-gjP">
-                                <rect key="frame" x="204" y="94" width="149" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-Fh-gjP">
+                                <rect key="frame" x="204" y="147" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="eM2-lu-8i9"/>
+                                    <constraint firstAttribute="width" constant="242" id="sQ0-27-xjF"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

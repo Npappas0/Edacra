@@ -27,7 +27,7 @@ class ViewController: UIViewController
     ///Randomizer Variables
     var spawnedBlocks : [UIView] = []
     var creationArray : [Int] = []
-    
+    var snake : [UIView] = []
     ////
     
     override func viewDidLoad()
@@ -121,14 +121,15 @@ class ViewController: UIViewController
         
         if (xPos < 0)||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12)
         {
-            block.hidden = true
+           
             //Probably change to
                //write code here for what happens then aleart happens
             xMove = 0
             yMove = 0
             xPos = 0
             yPos = 0
-            block.hidden = false
+           
+            
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
