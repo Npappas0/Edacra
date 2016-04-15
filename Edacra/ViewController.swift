@@ -13,7 +13,6 @@ class ViewController: UIViewController
     @IBOutlet weak var pointCounter: UILabel!
     
     //UI Objects
-    var block = UIView()
     var timer = NSTimer()
     var timer2 = NSTimer()
     var innerView = UIView()
@@ -27,7 +26,6 @@ class ViewController: UIViewController
     
     ///Randomizer Variables
     var spawnedBlocks : [UIView] = []
-    var rBlock = UIView()
     var creationArray : [Int] = []
     
     ////
@@ -35,16 +33,17 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        timerFunction()
         pointCounter.text = "0"
+        timerFunction()
         
-        innerView = UIView(frame: CGRectMake(20, 50, 300, 300))
+        innerView = UIView(frame: CGRectMake((view.frame.width - 300)/2, 50, 300, 300))
         innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
-        block = UIView(frame: CGRectMake(150, 150, 10, 10))
-        block.backgroundColor = UIColor.whiteColor()
-        self.innerView.addSubview(block)
+        xPos = 144
+        yPos = 144
+        
+        snake.append(createBlock(Int(xPos), y: Int(yPos)))
         
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StartButton")!)
@@ -52,11 +51,12 @@ class ViewController: UIViewController
         
         for var y = 0; y < 2; y++
         {
-            for var x = 10; x < 300; x += 10
+            for var x = 12; x < 300; x += 12
             {
                 creationArray.append(x)
             }
         }
+        blockRandom()
         
         for direction in directions
         {
@@ -64,15 +64,11 @@ class ViewController: UIViewController
             swipe.direction = direction
             self.view.addGestureRecognizer(swipe)
         }
-        
-       
-        
     }
     
     func timerFunction()
     {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updatePosition", userInfo: nil, repeats: true)
-        timer2 = NSTimer.scheduledTimerWithTimeInterval(0.8, target: self, selector: "blockRandom", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "updatePosition", userInfo: nil, repeats: true)
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer)
@@ -82,17 +78,17 @@ class ViewController: UIViewController
             switch swipeGesture.direction
             {
             case UISwipeGestureRecognizerDirection.Right:
-                xMove = 10
+                xMove = 12
                 yMove = 0
             case UISwipeGestureRecognizerDirection.Down:
                 xMove = 0
-                yMove = 10
+                yMove = 12
             case UISwipeGestureRecognizerDirection.Left:
-                xMove = -10
+                xMove = -12
                 yMove = 0
             case UISwipeGestureRecognizerDirection.Up:
                 xMove = 0
-                yMove = -10
+                yMove = -12
             default:
                 break
             }
@@ -107,18 +103,23 @@ class ViewController: UIViewController
     
     func updatePosition()
     {
-        for blockSpawn in spawnedBlocks
+        if (CGRectIntersectsRect(snake.last!.frame, spawnedBlocks.last!.frame))
         {
-            if (CGRectIntersectsRect(block.frame, blockSpawn.frame))
-            {
-                blockSpawn.removeFromSuperview()
-                pointCounter.text = (Int(pointCounter.text!)! + 10).description
-            }
+            spawnedBlocks.last!.removeFromSuperview()
+            snake.append(createBlock(Int(xPos), y: Int(yPos)))
+            blockRandom()
+            pointCounter.text = (Int(pointCounter.text!)! + 10).description
         }
-        xPos += xMove
-        yPos += yMove
-        self.block.transform = CGAffineTransformMakeTranslation(xPos, yPos)
-        if xPos == 150||(xPos == -150)||(yPos == 150)||(yPos == -150)
+            xPos += xMove
+            yPos += yMove
+            snake.append(createBlock(Int(xPos), y: Int(yPos)))
+        
+        if snake.count != 1
+        {
+            snake.removeFirst().removeFromSuperview()
+        }
+        
+        if (xPos < 0)||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12)
         {
             block.hidden = true
             //Probably change to
@@ -145,20 +146,20 @@ class ViewController: UIViewController
     {
         if creationArray.count == 0
         {
-            print("Gayme Ogre")
+            print("Game Over")
         }
         else
         {
-            randomatior(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)))
+            spawnedBlocks.append(createBlock(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count))))
         }
     }
     
-    func randomatior(x: Int, y: Int){
-        rBlock = UIView(frame: CGRectMake((CGFloat)(x), (CGFloat)(y), 10, 10))
+    func createBlock(x: Int, y: Int) -> UIView
+    {
+        let rBlock = UIView(frame: CGRectMake((CGFloat)(x), (CGFloat)(y), 12, 12))
         rBlock.backgroundColor = UIColor.whiteColor()
         innerView.addSubview(rBlock)
-        spawnedBlocks.append(rBlock)
-        
+        return rBlock
     }
 
 
