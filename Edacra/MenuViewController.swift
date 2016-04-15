@@ -37,11 +37,13 @@ class MenuViewController: UIViewController
             selecterNum = selecterNum + 1
             startImage.image = UIImage(named: "StartButton")
             yes = false
+            loopCounter = 0
         }
         else {
             selecterNum = selecterNum - 1
              quitImage.image = UIImage(named: "quit")
             yes = true
+            loopCounter = 0
         }
     }
     
@@ -72,7 +74,7 @@ class MenuViewController: UIViewController
         }
             else if loopCounter == 4 {
                 startImage.image = UIImage(named: "StartButton12")
-                loopCounter = 0
+                loopCounter = loopCounter + 1
         }
             else if loopCounter == 5 {
                 startImage.image = UIImage(named: "StartButton1")
@@ -81,7 +83,8 @@ class MenuViewController: UIViewController
         }
         
         }
-        else if selecterNum == 1 {
+        else if selecterNum == 1
+        {
             if loopCounter == 0 {
                 quitImage.image = UIImage(named: "quit")
                 loopCounter = loopCounter + 1
@@ -102,15 +105,12 @@ class MenuViewController: UIViewController
             else if loopCounter == 4 {
                 quitImage.image = UIImage(named: "quit2")
                 loopCounter = loopCounter + 1
-            
             }
             else if loopCounter == 5
             {
                 quitImage.image = UIImage(named: "quit1")
                 loopCounter = 0
             }
-
-            
         }
        
      
