@@ -46,17 +46,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lm-UR-ujc">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lm-UR-ujc">
                                 <rect key="frame" x="255" y="230" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="ZIb-cv-o63"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-Fh-gjP">
+                                <rect key="frame" x="204" y="94" width="149" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Mcx-io-FLl"/>
+                            <constraint firstItem="3lm-UR-ujc" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="PGf-a7-quI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lAb-ad-rlR"/>
+                    <connections>
+                        <outlet property="startImage" destination="tFY-Fh-gjP" id="MAm-NI-UTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxb-5j-wMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -29,6 +29,7 @@ class ViewController: UIViewController
     var spawnedBlocks : [UIView] = []
     var rBlock = UIView()
     var creationArray : [Int] = []
+    
     ////
     
     override func viewDidLoad()
@@ -45,7 +46,9 @@ class ViewController: UIViewController
         block.backgroundColor = UIColor.whiteColor()
         self.innerView.addSubview(block)
         
-        view.backgroundColor = UIColor.magentaColor()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StartButton")!)
+        
         
         for var y = 0; y < 2; y++
         {
@@ -117,16 +120,19 @@ class ViewController: UIViewController
         self.block.transform = CGAffineTransformMakeTranslation(xPos, yPos)
         if xPos == 150||(xPos == -150)||(yPos == 150)||(yPos == -150)
         {
+            block.hidden = true
             //Probably change to
                //write code here for what happens then aleart happens
             xMove = 0
             yMove = 0
             xPos = 0
             yPos = 0
+            block.hidden = false
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
+                
             
                 
                 
