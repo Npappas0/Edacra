@@ -119,7 +119,7 @@ class ViewController: UIViewController
             snake.removeFirst().removeFromSuperview()
         }
         
-        if (xPos < 24)||(xPos > innerView.frame.width - 36)||(yPos > innerView.frame.height - 24)||(yPos < 24)
+        if (xPos < 12)||(xPos > innerView.frame.width - 24)||(yPos > innerView.frame.height - 24)||(yPos < 24)
         {
            
             //Probably change to
@@ -128,7 +128,13 @@ class ViewController: UIViewController
             yMove = 0
             xPos = 144
             yPos = 144
-           
+            
+            for snakeBlock in snake
+            {
+                snakeBlock.removeFromSuperview()
+            }
+            snake.removeAll()
+            snake.append(createBlock(Int(xPos), y: Int(yPos)))
             
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
             
