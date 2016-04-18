@@ -119,15 +119,15 @@ class ViewController: UIViewController
             snake.removeFirst().removeFromSuperview()
         }
         
-        if (xPos < 0)||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12)
+        if (xPos < 24)||(xPos > innerView.frame.width - 36)||(yPos > innerView.frame.height - 24)||(yPos < 24)
         {
            
             //Probably change to
                //write code here for what happens then aleart happens
             xMove = 0
             yMove = 0
-            xPos = 0
-            yPos = 0
+            xPos = 144
+            yPos = 144
            
             
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
