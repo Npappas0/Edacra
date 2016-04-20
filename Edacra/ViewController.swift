@@ -46,7 +46,7 @@ class ViewController: UIViewController
         snake.append(createBlock(Int(xPos), y: Int(yPos)))
         
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StartButton")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StartButton")!)
         
         
         for var y = 0; y < 2; y++
@@ -119,11 +119,8 @@ class ViewController: UIViewController
             snake.removeFirst().removeFromSuperview()
         }
         
-        if (xPos < 12)||(xPos > innerView.frame.width - 24)||(yPos > innerView.frame.height - 24)||(yPos < 24)
+        if (xPos < 0||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12))
         {
-           
-            //Probably change to
-               //write code here for what happens then aleart happens
             xMove = 0
             yMove = 0
             xPos = 144
