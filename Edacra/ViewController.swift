@@ -46,7 +46,7 @@ class ViewController: UIViewController
         snake.append(createBlock(Int(xPos), y: Int(yPos)))
         
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "StartButton")!)
+        self.view.backgroundColor = UIColor.redColor()
         
         
         for var y = 0; y < 2; y++
