@@ -107,6 +107,8 @@ class ViewController: UIViewController
         {
             spawnedBlocks.last!.removeFromSuperview()
             snake.append(createBlock(Int(xPos), y: Int(yPos)))
+            snake.append(createBlock(Int(xPos), y: Int(yPos)))
+            snake.append(createBlock(Int(xPos), y: Int(yPos)))
             blockRandom()
             pointCounter.text = (Int(pointCounter.text!)! + 10).description
         }
@@ -119,25 +121,14 @@ class ViewController: UIViewController
             snake.removeFirst().removeFromSuperview()
         }
         
-        if (xPos < 0)||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12)
+        if (xPos < 0||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12))
         {
-           
-            //Probably change to
-               //write code here for what happens then aleart happens
-            xMove = 0
-            yMove = 0
-            xPos = 0
-            yPos = 0
-           
-            
             let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
+            
+            resetGame()
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
-                
-            
-                
-                
             }
             alert.addAction(okAction)
             presentViewController(alert, animated: true, completion: nil)
@@ -163,5 +154,46 @@ class ViewController: UIViewController
         return rBlock
     }
 
-
+    func resetGame()
+    {
+        xMove = 0
+        yMove = 0
+        xPos = 144
+        yPos = 144
+        timer.invalidate()
+        
+        for snakeBlock in snake
+        {
+            snakeBlock.removeFromSuperview()
+        }
+        snake.removeAll()
+        
+        pointCounter.text = "0"
+        timerFunction()
+        
+        innerView = UIView(frame: CGRectMake((view.frame.width - 300)/2, 50, 300, 300))
+        innerView.backgroundColor = UIColor.blackColor()
+        view.addSubview(innerView)
+        
+        xPos = 144
+        yPos = 144
+        
+        snake.append(createBlock(Int(xPos), y: Int(yPos)))
+        
+        for var y = 0; y < 2; y++
+        {
+            for var x = 12; x < 300; x += 12
+            {
+                creationArray.append(x)
+            }
+        }
+        blockRandom()
+        
+        for direction in directions
+        {
+            let swipe = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            swipe.direction = direction
+            self.view.addGestureRecognizer(swipe)
+        }
+    }
 }
