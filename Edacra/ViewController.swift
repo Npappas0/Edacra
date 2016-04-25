@@ -22,6 +22,7 @@ class ViewController: UIViewController
     var yMove = CGFloat(0)
     var xPos = CGFloat(0)
     var yPos = CGFloat(0)
+    var currentDirection = ""
     let directions = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Down]
     
     ///Randomizer Variables
@@ -48,17 +49,33 @@ class ViewController: UIViewController
             switch swipeGesture.direction
             {
             case UISwipeGestureRecognizerDirection.Right:
-                xMove = 12
-                yMove = 0
+                if currentDirection != "Left"
+                {
+                    xMove = 12
+                    yMove = 0
+                    currentDirection = "Right"
+                }
             case UISwipeGestureRecognizerDirection.Down:
-                xMove = 0
-                yMove = 12
+                if currentDirection != "Up"
+                {
+                    xMove = 0
+                    yMove = 12
+                    currentDirection = "Down"
+                }
             case UISwipeGestureRecognizerDirection.Left:
-                xMove = -12
-                yMove = 0
+                if currentDirection != "Right"
+                {
+                    xMove = -12
+                    yMove = 0
+                    currentDirection = "Left"
+                }
             case UISwipeGestureRecognizerDirection.Up:
-                xMove = 0
-                yMove = -12
+                if currentDirection != "Down"
+                {
+                    xMove = 0
+                    yMove = -12
+                    currentDirection = "Up"
+                }
             default:
                 break
             }
@@ -73,6 +90,13 @@ class ViewController: UIViewController
     
     func updatePosition()
     {
+        for var x = 0; x < snake.count - 1; x++
+        {
+            if (CGRectIntersectsRect(snake.last!.frame, snake[x].frame))
+            {
+                gameOver()
+            }
+        }
         if (CGRectIntersectsRect(snake.last!.frame, spawnedBlocks.last!.frame))
         {
             spawnedBlocks.last!.removeFromSuperview()
@@ -93,16 +117,8 @@ class ViewController: UIViewController
         
         if (xPos < 0||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12))
         {
-            let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
-            
-            resetGame()
-            
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-                UIAlertAction in
-            }
-            alert.addAction(okAction)
-            presentViewController(alert, animated: true, completion: nil)
-    }
+            gameOver()
+        }
 }
     func blockRandom()
     {
@@ -150,7 +166,7 @@ class ViewController: UIViewController
         
         snake.append(createBlock(Int(xPos), y: Int(yPos)))
         
-        for var y = 0; y < 2; y++
+        for var y = 0; y < 4; y++
         {
             for var x = 12; x < 300; x += 12
             {
@@ -165,5 +181,18 @@ class ViewController: UIViewController
             swipe.direction = direction
             self.view.addGestureRecognizer(swipe)
         }
+    }
+    
+    func gameOver()
+    {
+        let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
+        
+        resetGame()
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+        }
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
