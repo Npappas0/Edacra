@@ -17,6 +17,8 @@ class ViewController: UIViewController
     var timer2 = NSTimer()
     var innerView = UIView()
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     // Naming Variables
     var xMove = CGFloat(0)
     var yMove = CGFloat(0)
@@ -47,6 +49,14 @@ class ViewController: UIViewController
         
         
         self.view.backgroundColor = UIColor.redColor()
+        backgroundImage.image = UIImage(named: "arcade")
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        backgroundImage.frame = CGRectMake(0,0, screenSize.height * 0.2, 50)
+        
+
+        
+
         
         
         for var y = 0; y < 2; y++
