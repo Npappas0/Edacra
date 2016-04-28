@@ -50,7 +50,7 @@ class ViewController: UIViewController
         
         
         self.view.backgroundColor = UIColor.redColor()
-        backgroundImage.image = UIImage(named: "arcade")
+        
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         backgroundImage.frame = CGRectMake(0,0, screenSize.height * 0.2, 50)
