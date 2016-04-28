@@ -140,16 +140,20 @@ class ViewController: UIViewController
         if (CGRectIntersectsRect(snake.last!.frame, spawnedBlocks.last!.frame))
         {
             spawnedBlocks.last!.removeFromSuperview()
-            snake.append(createBlock(Int(xPos), y: Int(yPos)))
-            snake.append(createBlock(Int(xPos), y: Int(yPos)))
-            snake.append(createBlock(Int(xPos), y: Int(yPos)))
+            snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
+            snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
+            snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
             blockRandom()
             pointCounter.text = (Int(pointCounter.text!)! + 10).description
         }
             xPos += xMove
             yPos += yMove
-            snake.append(createBlock(Int(xPos), y: Int(yPos)))
+        snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
         
+        if snake.count == 2
+        {
+            currentDirection = ""
+        }
         if snake.count != 1
         {
             snake.removeFirst().removeFromSuperview()
@@ -168,13 +172,18 @@ class ViewController: UIViewController
         }
         else
         {
-            spawnedBlocks.append(createBlock(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count))))
+            spawnedBlocks.append(createBlock(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)), round: true))
         }
     }
     
-    func createBlock(x: Int, y: Int) -> UIView
+    
+    func createBlock(x: Int, y: Int, round: DarwinBoolean) -> UIView
     {
         let rBlock = UIView(frame: CGRectMake((CGFloat)(x), (CGFloat)(y), 12, 12))
+        if round
+        {
+            rBlock.layer.cornerRadius = 6
+        }
         rBlock.backgroundColor = UIColor.whiteColor()
         innerView.addSubview(rBlock)
         return rBlock
@@ -204,7 +213,7 @@ class ViewController: UIViewController
         xPos = 144
         yPos = 144
         
-        snake.append(createBlock(Int(xPos), y: Int(yPos)))
+        snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
         
         for var y = 0; y < 4; y++
         {
