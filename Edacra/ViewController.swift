@@ -47,7 +47,7 @@ class ViewController: UIViewController
         xPos = 144
         yPos = 144
         
-        snake.append(createBlock(Int(xPos), y: Int(yPos)))
+        snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
         
         
         self.view.backgroundColor = UIColor.redColor()
