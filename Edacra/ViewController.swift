@@ -43,6 +43,7 @@ class ViewController: UIViewController
         innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
+        
         xPos = 144
         yPos = 144
         
