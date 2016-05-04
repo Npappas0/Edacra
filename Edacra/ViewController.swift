@@ -53,8 +53,8 @@ class ViewController: UIViewController
         self.view.backgroundColor = UIColor.redColor()
         
         
-        let screenSize: CGRect = UIScreen.mainScreen().bounds
-        backgroundImage.frame = CGRectMake(0,0, screenSize.height * 0.2, 50)
+        //let screenSize: CGRect = UIScreen.mainScreen().bounds
+        //backgroundImage.frame = CGRectMake(0,0, screenSize.height * 0.2, 50)
         
 
         
