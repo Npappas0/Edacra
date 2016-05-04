@@ -36,46 +36,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        pointCounter.text = "0"
-        timerFunction()
-        
-        innerView = UIView(frame: CGRectMake((view.frame.width - 300)/2, 50, 300, 300))
-        innerView.backgroundColor = UIColor.blackColor()
-        view.addSubview(innerView)
-        
-        
-        xPos = 144
-        yPos = 144
-        
-        snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
-        
-        
-        self.view.backgroundColor = UIColor.redColor()
-        
-        
-        let screenSize: CGRect = UIScreen.mainScreen().bounds
-        backgroundImage.frame = CGRectMake(0,0, screenSize.height * 0.2, 50)
-        
-
-        
-
-        
-        
-        for var y = 0; y < 2; y++
-        {
-            for var x = 12; x < 300; x += 12
-            {
-                creationArray.append(x)
-            }
-        }
-        blockRandom()
-        
-        for direction in directions
-        {
-            let swipe = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-            swipe.direction = direction
-            self.view.addGestureRecognizer(swipe)
-        }
+        resetGame()
     }
     
     func timerFunction()
