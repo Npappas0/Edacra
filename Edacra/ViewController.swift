@@ -173,7 +173,7 @@ class ViewController: UIViewController
         }
         else
         {
-            spawnedBlocks.append(createBlock(creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random()) % (creationArray.count)), round: true))
+            spawnedBlocks.append(createBlock(creationArray.removeAtIndex(Int(arc4random_uniform(12)) % (creationArray.count)),y: creationArray.removeAtIndex(Int(arc4random_uniform(12)) % (creationArray.count)), round: true))
         }
     }
     
