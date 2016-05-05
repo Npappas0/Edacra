@@ -27,6 +27,7 @@ class ViewController: UIViewController
     var currentDirection = ""
     let directions = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Down]
     
+    
     ///Randomizer Variables
     var spawnedBlocks : [UIView] = []
     var creationArray : [Int] = []
