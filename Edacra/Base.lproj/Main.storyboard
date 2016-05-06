@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lH-AX-9jO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lH-AX-9jO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arcade" translatesAutoresizingMaskIntoConstraints="NO" id="faG-5m-3AR">
-                                <rect key="frame" x="-87" y="0.0" width="494" height="568"/>
+                                <rect key="frame" x="-85" y="0.0" width="494" height="568"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                         </subviews>
@@ -51,8 +51,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcP-FD-RsL">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2eN-xf-OKb" appends="YES" id="QSb-26-gRt"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ar4-Bb-d8d" appends="YES" id="EQg-2y-3An"/>
+                                </connections>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arcade" translatesAutoresizingMaskIntoConstraints="NO" id="zyw-J8-qc7">
-                                <rect key="frame" x="-87" y="0.0" width="494" height="568"/>
+                                <rect key="frame" x="-85" y="0.0" width="494" height="568"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quit" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-Hc-Qze">
@@ -79,13 +88,6 @@
                                     <constraint firstAttribute="height" constant="63" id="sco-tf-D1F"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdw-ex-QCf">
-                                <rect key="frame" x="85" y="297" width="150" height="30"/>
-                                <state key="normal" title="Change the Flickering"/>
-                                <connections>
-                                    <action selector="enterButton:" destination="0lH-AX-9jO" eventType="touchUpInside" id="0Pe-Ma-Czl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmT-n0-9Rk">
                                 <rect key="frame" x="34" y="400" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -98,7 +100,6 @@
                         <constraints>
                             <constraint firstItem="BhI-o8-orV" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="MAt-5T-h86"/>
                             <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Mcx-io-FLl"/>
-                            <constraint firstItem="xdw-ex-QCf" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bKM-vc-KWa"/>
                             <constraint firstItem="LO8-LY-RQw" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bMZ-p8-q9k"/>
                         </constraints>
                     </view>
@@ -110,12 +111,22 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxb-5j-wMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="2eN-xf-OKb">
+                    <connections>
+                        <action selector="swipeUpMenu:" destination="0lH-AX-9jO" id="0PP-eT-8IN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Ar4-Bb-d8d">
+                    <connections>
+                        <action selector="swipeDownMenu:" destination="0lH-AX-9jO" id="b6X-Ru-Y2H"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="999" y="73"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arcade" width="504" height="574"/>
+        <image name="arcade" width="491" height="567"/>
         <image name="quit" width="768" height="295"/>
         <image name="stickN" width="832" height="832"/>
     </resources>

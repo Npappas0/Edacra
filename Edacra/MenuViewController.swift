@@ -32,7 +32,7 @@ class MenuViewController: UIViewController
     }
     ///EndViewDidLoad
     
-    @IBAction func enterButton(sender: AnyObject) {
+    @IBAction func swipeUpMenu(sender: AnyObject) {
         if yes == true{
             selecterNum = selecterNum + 1
             startImage.image = UIImage(named: "StartButton")
@@ -46,7 +46,21 @@ class MenuViewController: UIViewController
             loopCounter = 0
         }
     }
-    
+
+    @IBAction func swipeDownMenu(sender: AnyObject) {
+        if yes == true{
+            selecterNum = selecterNum + 1
+            startImage.image = UIImage(named: "StartButton")
+            yes = false
+            loopCounter = 0
+        }
+        else {
+            selecterNum = selecterNum - 1
+            quitImage.image = UIImage(named: "quit")
+            yes = true
+            loopCounter = 0
+        }
+    }
     
     func looping(){
     loopTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
