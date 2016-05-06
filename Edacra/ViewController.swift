@@ -15,6 +15,7 @@ class ViewController: UIViewController
     //UI Objects
     var timer = NSTimer()
     var timer2 = NSTimer()
+    var stickTimer = NSTimer()
     var innerView = UIView()
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -77,6 +78,12 @@ class ViewController: UIViewController
             swipe.direction = direction
             self.view.addGestureRecognizer(swipe)
         }
+    }
+    func sticking(){
+        stickTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
+    }
+    func jiffing(){
+        
     }
     
     func timerFunction()

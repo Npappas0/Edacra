@@ -115,7 +115,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arcade" width="396" height="471"/>
+        <image name="arcade" width="504" height="574"/>
         <image name="quit" width="768" height="295"/>
         <image name="stickN" width="832" height="832"/>
     </resources>
