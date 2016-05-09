@@ -14,7 +14,6 @@ class ViewController: UIViewController
     
     //UI Objects
     var timer = NSTimer()
-    var timer2 = NSTimer()
     var stickTimer = NSTimer()
     var innerView = UIView()
     

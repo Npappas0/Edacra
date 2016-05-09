@@ -12,12 +12,16 @@ class MenuViewController: UIViewController
 {
     
     var loopTimer = NSTimer()
+    var stickTimer = NSTimer()
     var loopCounter = 0
     var selecterNum = 0
     var yes = true
+    var joystickCounter = 1
+    var joystickDirection = ""
     
     @IBOutlet weak var startImage: UIImageView!
     
+    @IBOutlet weak var joystickImage: UIImageView!
     @IBOutlet weak var quitImage: UIImageView!
     
     override func viewDidLoad()
@@ -33,6 +37,19 @@ class MenuViewController: UIViewController
     ///EndViewDidLoad
     
     @IBAction func swipeUpMenu(sender: AnyObject) {
+        changeFlicker()
+        joystickDirection = "U"
+        stickingTimer()
+    }
+    
+    @IBAction func swipeDownMenu(sender: AnyObject) {
+        changeFlicker()
+        joystickDirection = "D"
+        stickingTimer()
+    }
+    
+    func changeFlicker()
+    {
         if yes == true{
             selecterNum = selecterNum + 1
             startImage.image = UIImage(named: "StartButton")
@@ -47,23 +64,33 @@ class MenuViewController: UIViewController
         }
     }
     
-    @IBAction func swipeDownMenu(sender: AnyObject) {
-        if yes == true{
-            selecterNum = selecterNum + 1
-            startImage.image = UIImage(named: "StartButton")
-            yes = false
-            loopCounter = 0
+    func moveJoystick()
+    {
+        if joystickCounter == 1 || joystickCounter == 2
+        {
+            joystickImage.image = UIImage(named: "stick\(joystickDirection)\(joystickCounter)")
+            joystickCounter = joystickCounter + 1
         }
-        else {
-            selecterNum = selecterNum - 1
-            quitImage.image = UIImage(named: "quit")
-            yes = true
-            loopCounter = 0
+        else if joystickCounter == 3
+        {
+            joystickImage.image = UIImage(named: "stick\(joystickDirection)\(1)")
+            joystickCounter = joystickCounter + 1
+        }
+        else if joystickCounter == 4
+        {
+            joystickCounter = 1
+            joystickImage.image = UIImage(named: "stickN")
+            joystickDirection = ""
+            stickTimer.invalidate()
         }
     }
     
     func looping(){
         loopTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
+    }
+    
+    func stickingTimer(){
+        stickTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "moveJoystick", userInfo: nil, repeats: true)
     }
     
     func jiffing() {

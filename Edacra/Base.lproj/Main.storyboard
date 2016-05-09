@@ -110,6 +110,7 @@
                     <navigationItem key="navigationItem" id="lAb-ad-rlR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="joystickImage" destination="LO8-LY-RQw" id="EW5-n3-mfx"/>
                         <outlet property="quitImage" destination="BhI-o8-orV" id="RD6-a0-YlN"/>
                         <outlet property="startImage" destination="tFY-Fh-gjP" id="MAm-NI-UTX"/>
                     </connections>
