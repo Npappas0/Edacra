@@ -28,11 +28,22 @@ class MenuViewController: UIViewController
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
        
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(MenuViewController.respondToSwipeGesture(_:)))
+        swipe.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipe)
+        swipe.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipe)
         
     }
     ///EndViewDidLoad
     
-    @IBAction func enterButton(sender: AnyObject) {
+    @IBAction func enterButton(sender: AnyObject)
+    {
+        changeFlicker()
+    }
+    
+    func changeFlicker()
+    {
         if yes == true{
             selecterNum = selecterNum + 1
             startImage.image = UIImage(named: "StartButton")
@@ -41,12 +52,11 @@ class MenuViewController: UIViewController
         }
         else {
             selecterNum = selecterNum - 1
-             quitImage.image = UIImage(named: "quit")
+            quitImage.image = UIImage(named: "quit")
             yes = true
             loopCounter = 0
         }
     }
-    
     
     func looping(){
     loopTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
@@ -112,13 +122,27 @@ class MenuViewController: UIViewController
                 loopCounter = 0
             }
         }
-       
-     
-       
-        
-        
-        
     }
     
-
+    func respondToSwipeGesture(gesture: UIGestureRecognizer)
+    {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer
+        {
+            switch swipeGesture.direction
+            {
+            case UISwipeGestureRecognizerDirection.Down:
+                if yes == false
+                {
+                    changeFlicker()
+                }
+            case UISwipeGestureRecognizerDirection.Up:
+                if yes == true
+                {
+                    changeFlicker()
+                }
+            default:
+                break
+            }
+        }
+    }
 }

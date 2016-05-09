@@ -24,7 +24,7 @@ class ViewController: UIViewController
     var yMove = CGFloat(0)
     var xPos = CGFloat(0)
     var yPos = CGFloat(0)
-    var currentDirection = ""
+    var currentDirection = "Down"
     let directions = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Down]
     
     
