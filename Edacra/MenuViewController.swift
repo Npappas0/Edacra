@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController
 {
-
+    
     var loopTimer = NSTimer()
     var loopCounter = 0
     var selecterNum = 0
@@ -27,23 +27,27 @@ class MenuViewController: UIViewController
         quitImage.image = UIImage(named: "quit")
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
-       
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(MenuViewController.respondToSwipeGesture(_:)))
-        swipe.direction = UISwipeGestureRecognizerDirection.Up
-        self.view.addGestureRecognizer(swipe)
-        swipe.direction = UISwipeGestureRecognizerDirection.Down
-        self.view.addGestureRecognizer(swipe)
+        
         
     }
     ///EndViewDidLoad
     
-    @IBAction func enterButton(sender: AnyObject)
-    {
-        changeFlicker()
+    @IBAction func swipeUpMenu(sender: AnyObject) {
+        if yes == true{
+            selecterNum = selecterNum + 1
+            startImage.image = UIImage(named: "StartButton")
+            yes = false
+            loopCounter = 0
+        }
+        else {
+            selecterNum = selecterNum - 1
+            quitImage.image = UIImage(named: "quit")
+            yes = true
+            loopCounter = 0
+        }
     }
     
-    func changeFlicker()
-    {
+    @IBAction func swipeDownMenu(sender: AnyObject) {
         if yes == true{
             selecterNum = selecterNum + 1
             startImage.image = UIImage(named: "StartButton")
@@ -59,39 +63,39 @@ class MenuViewController: UIViewController
     }
     
     func looping(){
-    loopTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
+        loopTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
     }
     
     func jiffing() {
         if selecterNum == 0
-    {
-            if loopCounter == 0 {
-        startImage.image = UIImage(named: "StartButton")
-               loopCounter = loopCounter + 1
-        }
-            else if loopCounter == 1
         {
-            startImage.image = UIImage(named: "StartButton1")
-               loopCounter = loopCounter + 1
-        }
-            else if loopCounter == 2 {
-            startImage.image = UIImage(named: "StartButton12")
-               loopCounter = loopCounter + 1
-        }
-            else if loopCounter == 3 {
-            startImage.image = UIImage(named: "StartButton2")
+            if loopCounter == 0 {
+                startImage.image = UIImage(named: "StartButton")
                 loopCounter = loopCounter + 1
-        }
+            }
+            else if loopCounter == 1
+            {
+                startImage.image = UIImage(named: "StartButton1")
+                loopCounter = loopCounter + 1
+            }
+            else if loopCounter == 2 {
+                startImage.image = UIImage(named: "StartButton12")
+                loopCounter = loopCounter + 1
+            }
+            else if loopCounter == 3 {
+                startImage.image = UIImage(named: "StartButton2")
+                loopCounter = loopCounter + 1
+            }
             else if loopCounter == 4 {
                 startImage.image = UIImage(named: "StartButton12")
                 loopCounter = loopCounter + 1
-        }
+            }
             else if loopCounter == 5 {
                 startImage.image = UIImage(named: "StartButton1")
                 loopCounter = 0
-        
-        }
-        
+                
+            }
+            
         }
         else if selecterNum == 1
         {
@@ -122,27 +126,13 @@ class MenuViewController: UIViewController
                 loopCounter = 0
             }
         }
+        
+        
+        
+        
+        
+        
     }
     
-    func respondToSwipeGesture(gesture: UIGestureRecognizer)
-    {
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer
-        {
-            switch swipeGesture.direction
-            {
-            case UISwipeGestureRecognizerDirection.Down:
-                if yes == false
-                {
-                    changeFlicker()
-                }
-            case UISwipeGestureRecognizerDirection.Up:
-                if yes == true
-                {
-                    changeFlicker()
-                }
-            default:
-                break
-            }
-        }
-    }
+    
 }

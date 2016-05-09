@@ -19,13 +19,16 @@ class ViewController: UIViewController
     var innerView = UIView()
     
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var joystickImage: UIImageView!
     
     // Naming Variables
     var xMove = CGFloat(0)
-    var yMove = CGFloat(0)
+    var yMove = CGFloat(12)
     var xPos = CGFloat(0)
     var yPos = CGFloat(0)
+    var joystickCounter = 1
     var currentDirection = "Down"
+    var joystickDirection = ""
     let directions = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Down]
     
     
@@ -79,11 +82,9 @@ class ViewController: UIViewController
             self.view.addGestureRecognizer(swipe)
         }
     }
-    func sticking(){
-        stickTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
-    }
-    func jiffing(){
-        
+    
+    func stickingTimer(){
+        stickTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "moveJoystick", userInfo: nil, repeats: true)
     }
     
     func timerFunction()
@@ -103,6 +104,7 @@ class ViewController: UIViewController
                     xMove = 12
                     yMove = 0
                     currentDirection = "Right"
+                    joystickDirection = "R"
                 }
             case UISwipeGestureRecognizerDirection.Down:
                 if currentDirection != "Up"
@@ -110,6 +112,7 @@ class ViewController: UIViewController
                     xMove = 0
                     yMove = 12
                     currentDirection = "Down"
+                    joystickDirection = "D"
                 }
             case UISwipeGestureRecognizerDirection.Left:
                 if currentDirection != "Right"
@@ -117,6 +120,7 @@ class ViewController: UIViewController
                     xMove = -12
                     yMove = 0
                     currentDirection = "Left"
+                    joystickDirection = "L"
                 }
             case UISwipeGestureRecognizerDirection.Up:
                 if currentDirection != "Down"
@@ -124,10 +128,12 @@ class ViewController: UIViewController
                     xMove = 0
                     yMove = -12
                     currentDirection = "Up"
+                    joystickDirection = "U"
                 }
             default:
                 break
             }
+            stickingTimer()
         }
     }
     
@@ -172,7 +178,29 @@ class ViewController: UIViewController
         {
             gameOver()
         }
-}
+    }
+    
+    func moveJoystick()
+    {
+        if joystickCounter == 1 || joystickCounter == 2
+        {
+            joystickImage.image = UIImage(named: "stick\(joystickDirection)\(joystickCounter)")
+            joystickCounter = joystickCounter + 1
+        }
+        else if joystickCounter == 3
+        {
+            joystickImage.image = UIImage(named: "stick\(joystickDirection)\(1)")
+            joystickCounter = joystickCounter + 1
+        }
+        else if joystickCounter == 4
+        {
+            joystickCounter = 1
+            joystickImage.image = UIImage(named: "stickN")
+            joystickDirection = ""
+            stickTimer.invalidate()
+        }
+    }
+    
     func blockRandom()
     {
         if creationArray.count == 0
