@@ -43,8 +43,8 @@ class ViewController: UIViewController
         pointCounter.text = "0"
         timerFunction()
         
-        innerView = UIView(frame: CGRectMake((view.frame.width - 300)/2, 50, 300, 300))
-        innerView.backgroundColor = UIColor.blackColor()
+        innerView = UIView(frame: CGRectMake((view.frame.width - 257)/2, 65, 252, 252))
+        //innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
         
@@ -67,7 +67,7 @@ class ViewController: UIViewController
         
         for var y = 0; y < 2; y++
         {
-            for var x = 12; x < 300; x += 12
+            for var x = 12; x < 252; x += 12
             {
                 creationArray.append(x)
             }
@@ -229,9 +229,10 @@ class ViewController: UIViewController
     {
         xMove = 0
         yMove = 0
-        xPos = 144
-        yPos = 144
+        xPos = 124
+        yPos = 124
         timer.invalidate()
+        innerView.removeFromSuperview()
         
         for snakeBlock in snake
         {
@@ -242,8 +243,8 @@ class ViewController: UIViewController
         pointCounter.text = "0"
         timerFunction()
         
-        innerView = UIView(frame: CGRectMake((view.frame.width - 300)/2, 50, 300, 300))
-        innerView.backgroundColor = UIColor.blackColor()
+        innerView = UIView(frame: CGRectMake((view.frame.width - 258)/2, 65, 252, 252))
+        //innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
         xPos = 144
@@ -253,7 +254,7 @@ class ViewController: UIViewController
         
         for var y = 0; y < 4; y++
         {
-            for var x = 12; x < 300; x += 12
+            for var x = 12; x < 252; x += 12
             {
                 creationArray.append(x)
             }
