@@ -65,7 +65,7 @@ class ViewController: UIViewController
 
         
         
-        for var y = 0; y < 2; y++
+        for y in 0 ..< 2
         {
             for var x = 12; x < 252; x += 12
             {
@@ -76,19 +76,19 @@ class ViewController: UIViewController
         
         for direction in directions
         {
-            let swipe = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+            let swipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.respondToSwipeGesture(_:)))
             swipe.direction = direction
             self.view.addGestureRecognizer(swipe)
         }
     }
     
     func stickingTimer(){
-        stickTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "moveJoystick", userInfo: nil, repeats: true)
+        stickTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.moveJoystick), userInfo: nil, repeats: true)
     }
     
     func timerFunction()
     {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "updatePosition", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(ViewController.updatePosition), userInfo: nil, repeats: true)
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer)
@@ -271,14 +271,22 @@ class ViewController: UIViewController
     
     func gameOver()
     {
-        let alert = UIAlertController(title: "GameOver", message: "gg", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "GameOver", message: "", preferredStyle: .Alert)
         
         resetGame()
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+        let restartAction = UIAlertAction(title: "Restart", style: UIAlertActionStyle.Default) {
             UIAlertAction in
+            
+            self.resetGame()
         }
-        alert.addAction(okAction)
+        let menuAction = UIAlertAction(title: "Menu", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            
+            self.performSegueWithIdentifier("menu", sender: self)
+        }
+        alert.addAction(restartAction)
+        alert.addAction(menuAction)
         presentViewController(alert, animated: true, completion: nil)
     }
 }
