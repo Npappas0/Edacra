@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var pointCounter: UILabel!
-    
+    //I WANT TO COMMIT MYSELF TO NICK IN ALL HIS GLORY;
     //UI Objects
     var timer = NSTimer()
     var stickTimer = NSTimer()
