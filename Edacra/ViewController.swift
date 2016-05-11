@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController
 {
@@ -36,6 +37,12 @@ class ViewController: UIViewController
     var creationArray : [Int] = []
     var snake : [UIView] = []
     ////
+    // Musac
+    //let soundFilePath = NSBundle.mainBundle().pathForResource("mySound", ofType: "mySound")
+    //let soundFileURL = NSURL(fileURLWithPath: soundFilePath!)
+    //let player = AVAudioPlayer(contentsOfURL: soundFileURL, error: nil)
+    //player.numberOfLoops = -1 //infinite
+    //player.play()
     
     override func viewDidLoad()
     {
