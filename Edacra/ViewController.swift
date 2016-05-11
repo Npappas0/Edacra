@@ -26,6 +26,7 @@ class ViewController: UIViewController
     var xPos = CGFloat(0)
     var yPos = CGFloat(0)
     var joystickCounter = 1
+    var add = 0
     var currentDirection = "Down"
     var joystickDirection = ""
     let directions = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Down]
@@ -154,9 +155,7 @@ class ViewController: UIViewController
         if (CGRectIntersectsRect(snake.last!.frame, spawnedBlocks.last!.frame))
         {
             spawnedBlocks.last!.removeFromSuperview()
-            snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
-            snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
-            snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
+            add = add + 3
             blockRandom()
             pointCounter.text = (Int(pointCounter.text!)! + 10).description
         }
@@ -168,12 +167,16 @@ class ViewController: UIViewController
         {
             currentDirection = ""
         }
-        if snake.count != 1
+        if snake.count != 1 && add == 0
         {
             snake.removeFirst().removeFromSuperview()
         }
+        else if add != 0
+        {
+            add = add - 1
+        }
         
-        if (xPos < 0||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 12))
+        if (xPos < 0||(xPos > innerView.frame.width - 12)||(yPos > innerView.frame.height - 12)||(yPos < 0))
         {
             gameOver()
         }
@@ -271,7 +274,7 @@ class ViewController: UIViewController
     
     func gameOver()
     {
-        let alert = UIAlertController(title: "GameOver", message: "", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Game Over", message: "Score: " + pointCounter.text!, preferredStyle: .Alert)
         
         resetGame()
         

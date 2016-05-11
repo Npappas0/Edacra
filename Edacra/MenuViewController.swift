@@ -66,7 +66,7 @@ class MenuViewController: UIViewController
     
     @IBAction func onButtonTap(sender: AnyObject)
     {
-        if yes == false
+        if yes == true
         {
             performSegueWithIdentifier("game", sender: self)
         }
