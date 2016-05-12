@@ -64,6 +64,18 @@ class MenuViewController: UIViewController
         }
     }
     
+    @IBAction func onButtonTap(sender: AnyObject)
+    {
+        if yes == true
+        {
+            performSegueWithIdentifier("game", sender: self)
+        }
+        else
+        {
+            exit(0)
+        }
+    }
+    
     func moveJoystick()
     {
         if joystickCounter == 1 || joystickCounter == 2

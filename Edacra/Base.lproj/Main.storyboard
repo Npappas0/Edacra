@@ -37,6 +37,7 @@
                     <connections>
                         <outlet property="joystickImage" destination="Zhe-P9-b8B" id="Mar-yo-rpa"/>
                         <outlet property="pointCounter" destination="cEc-YB-DnY" id="8rF-gl-AGI"/>
+                        <segue destination="0lH-AX-9jO" kind="show" identifier="menu" animates="NO" id="Ez9-az-hAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,7 +90,8 @@
                                 <rect key="frame" x="34" y="400" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="xyr-Lz-mgg"/>
+                                    <action selector="onButtonTap:" destination="0lH-AX-9jO" eventType="touchUpInside" id="G2m-4y-uHT"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="game" animates="NO" id="xyr-Lz-mgg"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="stickN" translatesAutoresizingMaskIntoConstraints="NO" id="LO8-LY-RQw">
