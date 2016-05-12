@@ -22,7 +22,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-YB-DnY">
-                                <rect key="frame" x="243" y="61" width="42" height="21"/>
+                                <rect key="frame" x="240" y="97" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -30,8 +30,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stickN" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-P9-b8B">
                                 <rect key="frame" x="110" y="400" width="100" height="100"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="snakeName" translatesAutoresizingMaskIntoConstraints="NO" id="715-mb-dXB">
+                                <rect key="frame" x="66" y="14" width="197" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="daz-Eb-XQf"/>
+                                    <constraint firstAttribute="height" constant="57" id="gSV-I3-iOC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="715-mb-dXB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-248.5" id="dCd-K1-z1r"/>
+                            <constraint firstItem="715-mb-dXB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o9s-fC-Egt"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -42,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="81"/>
+            <point key="canvasLocation" x="340" y="73"/>
         </scene>
         <!--MenuViewController-->
         <scene sceneID="C8W-5m-IUe">
@@ -66,21 +77,21 @@
                                 </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arcade" translatesAutoresizingMaskIntoConstraints="NO" id="zyw-J8-qc7">
-                                <rect key="frame" x="-85" y="0.0" width="494" height="568"/>
+                                <rect key="frame" x="-87" y="0.0" width="494" height="568"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quit" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-Hc-Qze">
                                 <rect key="frame" x="194" y="569" width="68" height="78"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-Fh-gjP">
-                                <rect key="frame" x="85" y="111" width="150" height="75"/>
+                                <rect key="frame" x="85" y="145" width="150" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="eM2-lu-8i9"/>
                                     <constraint firstAttribute="width" constant="242" id="sQ0-27-xjF"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BhI-o8-orV">
-                                <rect key="frame" x="85" y="217" width="150" height="72"/>
+                                <rect key="frame" x="85" y="233" width="150" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="i0M-zR-2b2"/>
                                     <constraint firstAttribute="height" constant="63" id="sco-tf-D1F"/>
@@ -101,12 +112,21 @@
                                     <constraint firstAttribute="width" constant="100" id="ssF-k1-k9g"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWm-07-rJy">
+                                <rect key="frame" x="67" y="11" width="187" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="BmP-ZZ-EQo"/>
+                                    <constraint firstAttribute="width" constant="187" id="VrW-no-P0D"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BhI-o8-orV" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="MAt-5T-h86"/>
                             <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Mcx-io-FLl"/>
                             <constraint firstItem="LO8-LY-RQw" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bMZ-p8-q9k"/>
+                            <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="hLM-Us-NsW"/>
+                            <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-249" id="jgJ-0N-5Ye"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lAb-ad-rlR"/>
@@ -135,6 +155,7 @@
     <resources>
         <image name="arcade" width="491" height="567"/>
         <image name="quit" width="768" height="295"/>
+        <image name="snakeName" width="684" height="154"/>
         <image name="stickN" width="832" height="832"/>
     </resources>
 </document>

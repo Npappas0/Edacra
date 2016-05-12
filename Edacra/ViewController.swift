@@ -51,7 +51,7 @@ class ViewController: UIViewController
         pointCounter.text = "0"
         timerFunction()
         
-        innerView = UIView(frame: CGRectMake((view.frame.width - 257)/2, 65, 252, 252))
+        innerView = UIView(frame: CGRectMake((view.frame.width - 257)/2, 95, 252, 252))
         //innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
@@ -253,7 +253,7 @@ class ViewController: UIViewController
         pointCounter.text = "0"
         timerFunction()
         
-        innerView = UIView(frame: CGRectMake((view.frame.width - 258)/2, 65, 252, 252))
+        innerView = UIView(frame: CGRectMake((view.frame.width - 258)/2, 95, 252, 252))
         //innerView.backgroundColor = UIColor.blackColor()
         view.addSubview(innerView)
         
