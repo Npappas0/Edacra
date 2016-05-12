@@ -105,6 +105,7 @@ class ViewController: UIViewController
                     yMove = 0
                     currentDirection = "Right"
                     joystickDirection = "R"
+                    stickingTimer()
                 }
             case UISwipeGestureRecognizerDirection.Down:
                 if currentDirection != "Up"
@@ -113,6 +114,7 @@ class ViewController: UIViewController
                     yMove = 12
                     currentDirection = "Down"
                     joystickDirection = "D"
+                    stickingTimer()
                 }
             case UISwipeGestureRecognizerDirection.Left:
                 if currentDirection != "Right"
@@ -121,6 +123,7 @@ class ViewController: UIViewController
                     yMove = 0
                     currentDirection = "Left"
                     joystickDirection = "L"
+                    stickingTimer()
                 }
             case UISwipeGestureRecognizerDirection.Up:
                 if currentDirection != "Down"
@@ -129,11 +132,11 @@ class ViewController: UIViewController
                     yMove = -12
                     currentDirection = "Up"
                     joystickDirection = "U"
+                    stickingTimer()
                 }
             default:
                 break
             }
-            stickingTimer()
         }
     }
     
