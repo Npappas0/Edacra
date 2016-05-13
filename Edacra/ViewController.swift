@@ -18,6 +18,9 @@ class ViewController: UIViewController
     var stickTimer = NSTimer()
     var innerView = UIView()
     
+    //
+    var hissAudio = AVAudioPlayer()
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var joystickImage: UIImageView!
     
@@ -38,12 +41,6 @@ class ViewController: UIViewController
     var creationArray : [Int] = []
     var snake : [UIView] = []
     ////
-    // Musac
-    //let soundFilePath = NSBundle.mainBundle().pathForResource("mySound", ofType: "mySound")
-    //let soundFileURL = NSURL(fileURLWithPath: soundFilePath!)
-    //let player = AVAudioPlayer(contentsOfURL: soundFileURL, error: nil)
-    //player.numberOfLoops = -1 //infinite
-    //player.play()
     
     override func viewDidLoad()
     {
@@ -68,9 +65,7 @@ class ViewController: UIViewController
         //let screenSize: CGRect = UIScreen.mainScreen().bounds
         //backgroundImage.frame = CGRectMake(0,0, screenSize.height * 0.2, 50)
         
-
-        
-
+        ///Snake Stuff
         
         
         for y in 0 ..< 2
@@ -152,6 +147,9 @@ class ViewController: UIViewController
         xMove = 0
         yMove = 0
     }
+    ////
+    
+    
     
     func updatePosition()
     {
@@ -168,6 +166,9 @@ class ViewController: UIViewController
             add = add + 3
             blockRandom()
             pointCounter.text = (Int(pointCounter.text!)! + 10).description
+            //SOUND EFFECT!!!!!
+        
+            
         }
             xPos += xMove
             yPos += yMove
@@ -302,4 +303,11 @@ class ViewController: UIViewController
         alert.addAction(menuAction)
         presentViewController(alert, animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
+    
+    
 }
