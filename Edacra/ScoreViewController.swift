@@ -37,9 +37,16 @@ class ScoreViewController: UIViewController
         scoreArray = scoreArray.sort(>)
         
         var tempArray : [String] = []
-        for var x = 0; x < 10; x += 1
+        if scoreArray.count > 10
         {
-            tempArray.append(scoreArray[x])
+            for var x = 0; x < 10; x += 1
+            {
+                tempArray.append(scoreArray[x])
+            }
+        }
+        else
+        {
+            tempArray = scoreArray
         }
         
         for score in tempArray
