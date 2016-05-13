@@ -97,6 +97,11 @@ class MenuViewController: UIViewController
         }
     }
     
+    @IBAction func onScoreButtonTapped(sender: AnyObject)
+    {
+        performSegueWithIdentifier("menuToScore", sender: self)
+    }
+    
     func looping(){
         loopTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "jiffing", userInfo: nil, repeats: true)
     }
@@ -165,13 +170,10 @@ class MenuViewController: UIViewController
                 loopCounter = 0
             }
         }
-        
-        
-        
-        
-        
-        
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+    }
 }

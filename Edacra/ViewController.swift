@@ -34,6 +34,7 @@ class ViewController: UIViewController
     var currentDirection = "Down"
     var joystickDirection = ""
     let directions = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left, UISwipeGestureRecognizerDirection.Up, UISwipeGestureRecognizerDirection.Down]
+    var scoreArray : [String] = []
     
     
     ///Randomizer Variables
@@ -285,14 +286,17 @@ class ViewController: UIViewController
     
     func gameOver()
     {
+        scoreArray.append(pointCounter.text!)
+        NSUserDefaults.standardUserDefaults().setObject(scoreArray, forKey: "savedScores")
+        
         let alert = UIAlertController(title: "Game Over", message: "Score: " + pointCounter.text!, preferredStyle: .Alert)
         
         resetGame()
         
         let restartAction = UIAlertAction(title: "Restart", style: UIAlertActionStyle.Default) {
             UIAlertAction in
-            
-            self.resetGame()
+            self.currentDirection = "Down"
+            self.yMove = 12
         }
         let menuAction = UIAlertAction(title: "Menu", style: UIAlertActionStyle.Default) {
             UIAlertAction in
