@@ -18,6 +18,8 @@ class ScoreViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        scoreArray.append("0")
+        NSUserDefaults.standardUserDefaults().setObject(scoreArray, forKey: "finalScores")
         
         if NSUserDefaults.standardUserDefaults().stringArrayForKey("finalScores") != nil && NSUserDefaults.standardUserDefaults().stringArrayForKey("savedScores") != nil
         {
