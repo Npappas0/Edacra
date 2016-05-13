@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3EBC901CE4F484009C837A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EBC8F1CE4F484009C837A /* ScoreViewController.swift */; };
 		3FB367361CB4288300397429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367351CB4288300397429 /* AppDelegate.swift */; };
 		3FB367381CB4288300397429 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367371CB4288300397429 /* ViewController.swift */; };
 		3FB3673B1CB4288300397429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB367391CB4288300397429 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F3EBC8F1CE4F484009C837A /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		3FB367321CB4288300397429 /* Edacra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edacra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB367351CB4288300397429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB367371CB4288300397429 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3FB367351CB4288300397429 /* AppDelegate.swift */,
 				3FB367371CB4288300397429 /* ViewController.swift */,
 				3FB367391CB4288300397429 /* Main.storyboard */,
+				3F3EBC8F1CE4F484009C837A /* ScoreViewController.swift */,
 				3FB367631CB6CAD800397429 /* MenuViewController.swift */,
 				3FB3673C1CB4288300397429 /* Assets.xcassets */,
 				3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				3FB367381CB4288300397429 /* ViewController.swift in Sources */,
 				3FB367641CB6CAD800397429 /* MenuViewController.swift in Sources */,
 				3FB367361CB4288300397429 /* AppDelegate.swift in Sources */,
+				3F3EBC901CE4F484009C837A /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
