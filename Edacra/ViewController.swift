@@ -69,7 +69,7 @@ class ViewController: UIViewController
         ///Snake Stuff
         
         
-        for y in 0 ..< 2
+        for y in 0 ..< 6
         {
             for var x = 12; x < 252; x += 12
             {
@@ -271,7 +271,7 @@ class ViewController: UIViewController
         
         snake.append(createBlock(Int(xPos), y: Int(yPos), round: false))
         
-        for var y = 0; y < 4; y++
+        for var y = 0; y < 6; y++
         {
             for var x = 12; x < 252; x += 12
             {
