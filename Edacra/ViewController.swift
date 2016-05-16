@@ -109,6 +109,7 @@ class ViewController: UIViewController
             case UISwipeGestureRecognizerDirection.Right:
                 if currentDirection != "Left"
                 {
+                    stickTimer.invalidate()
                     xMove = 12
                     yMove = 0
                     currentDirection = "Right"
@@ -118,6 +119,7 @@ class ViewController: UIViewController
             case UISwipeGestureRecognizerDirection.Down:
                 if currentDirection != "Up"
                 {
+                    stickTimer.invalidate()
                     xMove = 0
                     yMove = 12
                     currentDirection = "Down"
@@ -127,6 +129,7 @@ class ViewController: UIViewController
             case UISwipeGestureRecognizerDirection.Left:
                 if currentDirection != "Right"
                 {
+                    stickTimer.invalidate()
                     xMove = -12
                     yMove = 0
                     currentDirection = "Left"
@@ -136,6 +139,7 @@ class ViewController: UIViewController
             case UISwipeGestureRecognizerDirection.Up:
                 if currentDirection != "Down"
                 {
+                    stickTimer.invalidate()
                     xMove = 0
                     yMove = -12
                     currentDirection = "Up"
