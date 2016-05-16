@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="73"/>
+            <point key="canvasLocation" x="1378" y="-37"/>
         </scene>
         <!--MenuViewController-->
         <scene sceneID="C8W-5m-IUe">
@@ -83,8 +83,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quit" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-Hc-Qze">
                                 <rect key="frame" x="194" y="569" width="68" height="78"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-Fh-gjP">
+                                <rect key="frame" x="85" y="136" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="eM2-lu-8i9"/>
+                                    <constraint firstAttribute="width" constant="242" id="sQ0-27-xjF"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BhI-o8-orV">
-                                <rect key="frame" x="85" y="233" width="150" height="72"/>
+                                <rect key="frame" x="85" y="228" width="150" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="i0M-zR-2b2"/>
                                     <constraint firstAttribute="height" constant="63" id="sco-tf-D1F"/>
@@ -111,7 +118,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-pK-Iib">
-                                <rect key="frame" x="148" y="527" width="158" height="33"/>
+                                <rect key="frame" x="81" y="527" width="158" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="84y-QX-zHv"/>
                                     <constraint firstAttribute="height" constant="33" id="pbM-TA-ObF"/>
@@ -144,30 +151,42 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-Fh-gjP">
-                                <rect key="frame" x="85" y="145" width="150" height="75"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="rg2-jd-5hS">
+                                <rect key="frame" x="147" y="212" width="26" height="13"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="eM2-lu-8i9"/>
-                                    <constraint firstAttribute="width" constant="242" id="sQ0-27-xjF"/>
+                                    <constraint firstAttribute="height" constant="13" id="cab-dm-Rn9"/>
+                                    <constraint firstAttribute="width" constant="26" id="dYH-Bo-gqT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-FO-zsh">
+                                <rect key="frame" x="147" y="301" width="26" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="lZF-lc-xjr"/>
+                                    <constraint firstAttribute="width" constant="26" id="tIr-cC-lEZ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xTZ-pK-Iib" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="259.5" id="2WD-uh-3II"/>
+                            <constraint firstItem="rg2-jd-5hS" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="46P-jq-uG0"/>
                             <constraint firstItem="xTZ-pK-Iib" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" constant="78.5" id="Blx-08-fVd"/>
                             <constraint firstItem="TmT-n0-9Rk" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" constant="-97" id="CpN-Bw-ItI"/>
                             <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-101.5" id="EmD-wq-oRs"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-247" id="FEg-yE-CCE"/>
+                            <constraint firstItem="cJf-FO-zsh" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Glc-4h-gV8"/>
                             <constraint firstItem="BhI-o8-orV" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="MAt-5T-h86"/>
                             <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Mcx-io-FLl"/>
                             <constraint firstItem="BhI-o8-orV" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-15" id="Wg6-yq-P4v"/>
+                            <constraint firstItem="cJf-FO-zsh" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="23.5" id="bDr-3W-G99"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-247" id="bE2-nw-1vT"/>
                             <constraint firstItem="LO8-LY-RQw" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bMZ-p8-q9k"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bcw-td-8Je"/>
                             <constraint firstItem="LO8-LY-RQw" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="166" id="h6A-9H-t0l"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="hLM-Us-NsW"/>
+                            <constraint firstItem="rg2-jd-5hS" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-65.5" id="hOJ-JU-wrM"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-249" id="jgJ-0N-5Ye"/>
+                            <constraint firstItem="xTZ-pK-Iib" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="ldF-ZC-F7c"/>
                             <constraint firstItem="TmT-n0-9Rk" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="161" id="owL-oq-Pdf"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="wR9-VZ-2bU"/>
                         </constraints>
@@ -177,12 +196,15 @@
                                 <exclude reference="hLM-Us-NsW"/>
                                 <exclude reference="jgJ-0N-5Ye"/>
                                 <exclude reference="wR9-VZ-2bU"/>
+                                <exclude reference="Blx-08-fVd"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="lAb-ad-rlR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="arrow1" destination="rg2-jd-5hS" id="BUK-PX-ZId"/>
+                        <outlet property="arrow2" destination="cJf-FO-zsh" id="OWc-ic-2tr"/>
                         <outlet property="joystickImage" destination="LO8-LY-RQw" id="EW5-n3-mfx"/>
                         <outlet property="quitImage" destination="BhI-o8-orV" id="RD6-a0-YlN"/>
                         <outlet property="startImage" destination="tFY-Fh-gjP" id="MAm-NI-UTX"/>
@@ -201,7 +223,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="999" y="73"/>
+            <point key="canvasLocation" x="840" y="80"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="YOa-G5-j2p">
@@ -288,11 +310,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2W-8I-Bzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="73"/>
+            <point key="canvasLocation" x="1378" y="660"/>
         </scene>
     </scenes>
     <resources>
         <image name="arcade" width="491" height="567"/>
+        <image name="arrow" width="303" height="153"/>
         <image name="edacra" width="793" height="207"/>
         <image name="gameButton" width="362" height="365"/>
         <image name="gameButtonPressed" width="406" height="404"/>
@@ -302,6 +325,6 @@
         <image name="stickN" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C5Z-VA-ya0"/>
+        <segue reference="Ez9-az-hAW"/>
     </inferredMetricsTieBreakers>
 </document>

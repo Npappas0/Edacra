@@ -19,7 +19,10 @@ class ViewController: UIViewController
     var innerView = UIView()
     
     //
-    var hissAudio = AVAudioPlayer()
+    var player: AVAudioPlayer?
+    var musicReset = -2
+    var musicTimer = NSTimer()
+    
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var joystickImage: UIImageView!
@@ -48,6 +51,8 @@ class ViewController: UIViewController
         super.viewDidLoad()
         pointCounter.text = "0"
         timerFunction()
+        musicFunction()
+        
         
         innerView = UIView(frame: CGRectMake((view.frame.width - 257)/2, 95, 252, 252))
         //innerView.backgroundColor = UIColor.blackColor()
@@ -93,6 +98,10 @@ class ViewController: UIViewController
     func timerFunction()
     {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(ViewController.updatePosition), userInfo: nil, repeats: true)
+    }
+    func musicFunction()
+    {
+        musicTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.backgroundMusic), userInfo: nil, repeats: true)
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer)
@@ -167,11 +176,13 @@ class ViewController: UIViewController
         }
         if (CGRectIntersectsRect(snake.last!.frame, spawnedBlocks.last!.frame))
         {
+            
             spawnedBlocks.last!.removeFromSuperview()
             add = add + 3
             blockRandom()
             pointCounter.text = (Int(pointCounter.text!)! + 10).description
             //SOUND EFFECT!!!!!
+            
         
             
         }
@@ -252,6 +263,7 @@ class ViewController: UIViewController
         yPos = 124
         timer.invalidate()
         innerView.removeFromSuperview()
+        musicReset = -60
         
         for snakeBlock in snake
         {
@@ -292,6 +304,7 @@ class ViewController: UIViewController
     {
         scoreArray.append(pointCounter.text!)
         NSUserDefaults.standardUserDefaults().setObject(scoreArray, forKey: "savedScores")
+        player?.stop()
         
         let alert = UIAlertController(title: "Game Over", message: "Score: " + pointCounter.text!, preferredStyle: .Alert)
         
@@ -301,6 +314,7 @@ class ViewController: UIViewController
             UIAlertAction in
             self.currentDirection = "Down"
             self.yMove = 12
+            self.musicReset = -1
         }
         let menuAction = UIAlertAction(title: "Menu", style: UIAlertActionStyle.Default) {
             UIAlertAction in
@@ -309,8 +323,45 @@ class ViewController: UIViewController
         }
         alert.addAction(restartAction)
         alert.addAction(menuAction)
-        presentViewController(alert, animated: true, completion: nil)
+       presentViewController(alert, animated: true, completion: nil)
     }
+  
+    func playSound() {
+        let url = NSBundle.mainBundle().URLForResource("hiss", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    func backgroundMusic() {
+        musicReset = musicReset + 1
+        if musicReset == 0 {
+        let url = NSBundle.mainBundle().URLForResource("jungle", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+                            }
+        else if musicReset == 4 {
+            print("its working!")
+        }
+        else if musicReset == 130{
+            musicReset = -1
+        }
+    }
+
     
     
     

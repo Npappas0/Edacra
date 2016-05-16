@@ -16,6 +16,8 @@
 		3FB3674B1CB4288300397429 /* EdacraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3674A1CB4288300397429 /* EdacraTests.swift */; };
 		3FB367561CB4288300397429 /* EdacraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367551CB4288300397429 /* EdacraUITests.swift */; };
 		3FB367641CB6CAD800397429 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB367631CB6CAD800397429 /* MenuViewController.swift */; };
+		3FCBDCB91CEA6AFF00920002 /* hiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FCBDCB81CEA6AFF00920002 /* hiss.mp3 */; };
+		3FCBDCBB1CEA6F0700920002 /* jungle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FCBDCBA1CEA6F0700920002 /* jungle.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		3FB367551CB4288300397429 /* EdacraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdacraUITests.swift; sourceTree = "<group>"; };
 		3FB367571CB4288300397429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB367631CB6CAD800397429 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3FCBDCB81CEA6AFF00920002 /* hiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hiss.mp3; path = ../../../Desktop/hiss.mp3; sourceTree = "<group>"; };
+		3FCBDCBA1CEA6F0700920002 /* jungle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = jungle.mp3; path = "../../../Music/iTunes/iTunes Media/Music/Unknown Artist/Unknown Album/jungle.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				3FB3673C1CB4288300397429 /* Assets.xcassets */,
 				3FB3673E1CB4288300397429 /* LaunchScreen.storyboard */,
 				3FB367411CB4288300397429 /* Info.plist */,
+				3FCBDCB81CEA6AFF00920002 /* hiss.mp3 */,
+				3FCBDCBA1CEA6F0700920002 /* jungle.mp3 */,
 			);
 			path = Edacra;
 			sourceTree = "<group>";
@@ -239,7 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB367401CB4288300397429 /* LaunchScreen.storyboard in Resources */,
+				3FCBDCB91CEA6AFF00920002 /* hiss.mp3 in Resources */,
 				3FB3673D1CB4288300397429 /* Assets.xcassets in Resources */,
+				3FCBDCBB1CEA6F0700920002 /* jungle.mp3 in Resources */,
 				3FB3673B1CB4288300397429 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,8 +24,16 @@ class MenuViewController: UIViewController
     @IBOutlet weak var joystickImage: UIImageView!
     @IBOutlet weak var quitImage: UIImageView!
     
+    // Selection Images and Vars
+    var arrowSelect = false
+    
+    @IBOutlet weak var arrow2: UIImageView!
+    @IBOutlet weak var arrow1: UIImageView!
+    
+    
     override func viewDidLoad()
     {
+        arrowArea()
         looping()
         startImage.image = UIImage(named: "StartButton")
         quitImage.image = UIImage(named: "quit")
@@ -41,6 +49,7 @@ class MenuViewController: UIViewController
         changeFlicker()
         joystickDirection = "U"
         stickingTimer()
+        arrowArea()
     }
     
     @IBAction func swipeDownMenu(sender: AnyObject) {
@@ -48,6 +57,7 @@ class MenuViewController: UIViewController
         changeFlicker()
         joystickDirection = "D"
         stickingTimer()
+        arrowArea()
     }
     
     func changeFlicker()
@@ -177,5 +187,23 @@ class MenuViewController: UIViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         
+    }
+   
+    func arrowArea(){
+        if arrowSelect == true{
+            arrowSelect = false
+        }
+        else if arrowSelect == false {
+            arrowSelect = true
+        }
+        if arrowSelect == true
+        {
+            arrow1.hidden = false
+           arrow2.hidden = true
+        }
+        else if arrowSelect == false {
+            arrow1.hidden = true
+            arrow2.hidden = false
+        }
     }
 }
