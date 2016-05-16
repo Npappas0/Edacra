@@ -15,6 +15,7 @@ class ScoreViewController: UIViewController
     @IBOutlet weak var scoreList: UILabel!
     
     var scoreArray : [String] = []
+    var largeArray : [String] = []
     
     override func viewDidLoad()
     {
@@ -54,6 +55,20 @@ class ScoreViewController: UIViewController
         else
         {
             tempArray = scoreArray
+        }
+        
+        for score in tempArray
+        {
+            if Int(score) > 99
+            {
+                largeArray.append(score)
+                tempArray.removeAtIndex(tempArray.indexOf(score)!)
+            }
+        }
+        
+        for score in largeArray
+        {
+            scoreList.text = scoreList.text! + score + "\n"
         }
         
         for score in tempArray
