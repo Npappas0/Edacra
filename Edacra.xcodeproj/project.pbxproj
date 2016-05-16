@@ -199,7 +199,7 @@
 				TargetAttributes = {
 					3FB367311CB4288300397429 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 6D3UN8B3PL;
+						DevelopmentTeam = 336695RJ3Y;
 					};
 					3FB367451CB4288300397429 = {
 						CreatedOnToolsVersion = 7.2;
@@ -414,7 +414,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Edacra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = npappas.Edacra;
+				PRODUCT_BUNDLE_IDENTIFIER = Edacra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -428,7 +428,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Edacra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = npappas.Edacra;
+				PRODUCT_BUNDLE_IDENTIFIER = Edacra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
