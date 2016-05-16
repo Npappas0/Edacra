@@ -21,22 +21,22 @@
                                 <rect key="frame" x="-85" y="0.0" width="494" height="568"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-YB-DnY">
-                                <rect key="frame" x="240" y="97" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stickN" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-P9-b8B">
                                 <rect key="frame" x="110" y="400" width="100" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="snakeName" translatesAutoresizingMaskIntoConstraints="NO" id="715-mb-dXB">
-                                <rect key="frame" x="66" y="14" width="197" height="50"/>
+                                <rect key="frame" x="53" y="9" width="218" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="daz-Eb-XQf"/>
                                     <constraint firstAttribute="height" constant="57" id="gSV-I3-iOC"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-YB-DnY">
+                                <rect key="frame" x="247" y="94" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -97,9 +97,14 @@
                                     <constraint firstAttribute="height" constant="63" id="sco-tf-D1F"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmT-n0-9Rk">
-                                <rect key="frame" x="34" y="400" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmT-n0-9Rk">
+                                <rect key="frame" x="31" y="420" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HZd-IQ-v2a"/>
+                                    <constraint firstAttribute="height" constant="50" id="tHU-yW-xjC"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="gameButton"/>
+                                <state key="highlighted" image="gameButtonPressed"/>
                                 <connections>
                                     <action selector="onButtonTap:" destination="0lH-AX-9jO" eventType="touchUpInside" id="G2m-4y-uHT"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="game" animates="NO" id="xyr-Lz-mgg"/>
@@ -119,9 +124,17 @@
                                     <constraint firstAttribute="width" constant="187" id="VrW-no-P0D"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-pK-Iib">
-                                <rect key="frame" x="239" y="400" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-pK-Iib">
+                                <rect key="frame" x="148" y="527" width="158" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="84y-QX-zHv"/>
+                                    <constraint firstAttribute="height" constant="33" id="pbM-TA-ObF"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="score">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="score"/>
                                 <connections>
                                     <action selector="onScoreButtonTapped:" destination="0lH-AX-9jO" eventType="touchUpInside" id="hZA-Lz-zHq"/>
                                 </connections>
@@ -129,11 +142,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xTZ-pK-Iib" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="259.5" id="2WD-uh-3II"/>
+                            <constraint firstItem="xTZ-pK-Iib" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" constant="78.5" id="Blx-08-fVd"/>
+                            <constraint firstItem="TmT-n0-9Rk" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" constant="-97" id="CpN-Bw-ItI"/>
                             <constraint firstItem="BhI-o8-orV" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="MAt-5T-h86"/>
                             <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Mcx-io-FLl"/>
                             <constraint firstItem="LO8-LY-RQw" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bMZ-p8-q9k"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="hLM-Us-NsW"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-249" id="jgJ-0N-5Ye"/>
+                            <constraint firstItem="TmT-n0-9Rk" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="161" id="owL-oq-Pdf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lAb-ad-rlR"/>
@@ -172,12 +189,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arcade" translatesAutoresizingMaskIntoConstraints="NO" id="Z7y-V9-1A7">
-                                <rect key="frame" x="-85" y="0.0" width="494" height="568"/>
+                                <rect key="frame" x="-87" y="0.0" width="494" height="568"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5N-EF-ohz">
-                                <rect key="frame" x="213" y="406" width="94" height="30"/>
-                                <state key="normal" title="Back to Menu"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5N-EF-ohz">
+                                <rect key="frame" x="235" y="419" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="i1y-9x-RIc"/>
+                                    <constraint firstAttribute="height" constant="50" id="rob-2g-rSs"/>
+                                </constraints>
+                                <state key="normal" title="Back to Menu" image="gameButton"/>
                                 <connections>
                                     <action selector="onButtonTap:" destination="rc3-WC-aMp" eventType="touchUpInside" id="ZcK-oh-BIw"/>
                                 </connections>
@@ -211,8 +232,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrO-p6-6eY">
+                                <rect key="frame" x="244" y="438" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="snakeName" translatesAutoresizingMaskIntoConstraints="NO" id="XG9-2U-XyJ">
-                                <rect key="frame" x="57" y="7" width="187" height="52"/>
+                                <rect key="frame" x="33" y="9" width="235" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="p1f-Aj-PBd"/>
                                     <constraint firstAttribute="height" constant="52" id="yp4-Zg-BfZ"/>
@@ -222,6 +249,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XG9-2U-XyJ" firstAttribute="centerX" secondItem="WNV-Fm-2p3" secondAttribute="centerX" id="Utl-xi-0SC"/>
+                            <constraint firstItem="Z5N-EF-ohz" firstAttribute="centerX" secondItem="WNV-Fm-2p3" secondAttribute="centerX" constant="97" id="Xa0-Rk-FiO"/>
+                            <constraint firstItem="Z5N-EF-ohz" firstAttribute="centerY" secondItem="WNV-Fm-2p3" secondAttribute="centerY" constant="165" id="fna-br-XST"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -237,11 +266,14 @@
     </scenes>
     <resources>
         <image name="arcade" width="491" height="567"/>
+        <image name="gameButton" width="362" height="365"/>
+        <image name="gameButtonPressed" width="406" height="404"/>
         <image name="quit" width="768" height="295"/>
+        <image name="score" width="735" height="101"/>
         <image name="snakeName" width="684" height="154"/>
-        <image name="stickN" width="832" height="832"/>
+        <image name="stickN" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C5Z-VA-ya0"/>
+        <segue reference="Ez9-az-hAW"/>
     </inferredMetricsTieBreakers>
 </document>
