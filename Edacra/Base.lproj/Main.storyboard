@@ -117,13 +117,6 @@
                                     <constraint firstAttribute="width" constant="100" id="ssF-k1-k9g"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWm-07-rJy">
-                                <rect key="frame" x="67" y="11" width="187" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="BmP-ZZ-EQo"/>
-                                    <constraint firstAttribute="width" constant="187" id="VrW-no-P0D"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-pK-Iib">
                                 <rect key="frame" x="148" y="527" width="158" height="33"/>
                                 <constraints>
@@ -139,6 +132,21 @@
                                     <action selector="onScoreButtonTapped:" destination="0lH-AX-9jO" eventType="touchUpInside" id="hZA-Lz-zHq"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="edacra" translatesAutoresizingMaskIntoConstraints="NO" id="yWm-07-rJy">
+                                <rect key="frame" x="45" y="6" width="235" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="BmP-ZZ-EQo"/>
+                                    <constraint firstAttribute="height" constant="62" id="KJb-2A-5Jo"/>
+                                    <constraint firstAttribute="width" constant="187" id="VrW-no-P0D"/>
+                                    <constraint firstAttribute="width" constant="235" id="iah-VK-hal"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BmP-ZZ-EQo"/>
+                                        <exclude reference="VrW-no-P0D"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,11 +155,19 @@
                             <constraint firstItem="TmT-n0-9Rk" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" constant="-97" id="CpN-Bw-ItI"/>
                             <constraint firstItem="BhI-o8-orV" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="MAt-5T-h86"/>
                             <constraint firstItem="tFY-Fh-gjP" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="Mcx-io-FLl"/>
+                            <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-247" id="bE2-nw-1vT"/>
                             <constraint firstItem="LO8-LY-RQw" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="bMZ-p8-q9k"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="hLM-Us-NsW"/>
                             <constraint firstItem="yWm-07-rJy" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="-249" id="jgJ-0N-5Ye"/>
                             <constraint firstItem="TmT-n0-9Rk" firstAttribute="centerY" secondItem="vcU-va-8JM" secondAttribute="centerY" constant="161" id="owL-oq-Pdf"/>
+                            <constraint firstItem="yWm-07-rJy" firstAttribute="centerX" secondItem="vcU-va-8JM" secondAttribute="centerX" id="wR9-VZ-2bU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hLM-Us-NsW"/>
+                                <exclude reference="jgJ-0N-5Ye"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="lAb-ad-rlR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -266,6 +282,7 @@
     </scenes>
     <resources>
         <image name="arcade" width="491" height="567"/>
+        <image name="edacra" width="793" height="207"/>
         <image name="gameButton" width="362" height="365"/>
         <image name="gameButtonPressed" width="406" height="404"/>
         <image name="quit" width="768" height="295"/>
@@ -274,6 +291,6 @@
         <image name="stickN" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ez9-az-hAW"/>
+        <segue reference="C5Z-VA-ya0"/>
     </inferredMetricsTieBreakers>
 </document>
