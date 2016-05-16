@@ -37,12 +37,14 @@ class MenuViewController: UIViewController
     ///EndViewDidLoad
     
     @IBAction func swipeUpMenu(sender: AnyObject) {
+        stickTimer.invalidate()
         changeFlicker()
         joystickDirection = "U"
         stickingTimer()
     }
     
     @IBAction func swipeDownMenu(sender: AnyObject) {
+        stickTimer.invalidate()
         changeFlicker()
         joystickDirection = "D"
         stickingTimer()
